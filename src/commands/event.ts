@@ -120,7 +120,7 @@ export default new Command({
           (event, index) =>
             `\`${++index}.\` ${event.split(".")[0]}\nStarts at: <t:${
               new Jsoning(`src/events/${event}`).get("starts_at") / 1000
-            }>\nEnds in: **${ms(new Jsoning(`events/${event}`).get("ends_in"), {
+            }>\nEnds in: **${ms(new Jsoning(`src/events/${event}`).get("ends_in"), {
               long: true,
             })}**\n`
         );
